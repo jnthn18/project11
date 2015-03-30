@@ -21,8 +21,8 @@
         <td><%= music_show.date_of_show %></td>
         <td><%= music_show.ticket_price %></td>
         <td><%= link_to 'Show', music_show %></td>
-        <td><%= link_to 'Edit', edit_music_show_path(music_show) %></td>
-        <td><%= link_to 'Destroy', music_show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><% if user_signed_in? %><%= link_to 'Edit', edit_music_show_path(music_show) %><% end %></td>
+        <td><% if user_signed_in? %><%= link_to 'Destroy', music_show, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td>
       </tr>
     <% end %>
   </tbody>

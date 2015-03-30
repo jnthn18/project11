@@ -1,6 +1,6 @@
 class MusicShowsController < ApplicationController
   before_action :set_music_show, only: [:show, :edit, :update, :destroy]
-
+  before_action :only_allow_signed_in_users, except: [:index, :show] 
   # GET /music_shows
   # GET /music_shows.json
   def index
@@ -71,4 +71,4 @@ class MusicShowsController < ApplicationController
     def music_show_params
       params.require(:music_show).permit(:band_name, :location, :date_of_show, :ticket_price)
     end
-end
+  end
