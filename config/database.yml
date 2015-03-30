@@ -22,4 +22,5 @@ test:
 
 production:
   <<: *default
-  database: music_shows
+  database: dbkf532hl3tbr2
+  user: hsabugfujtbflc
