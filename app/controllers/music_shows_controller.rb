@@ -1,6 +1,6 @@
 class MusicShowsController < ApplicationController
   before_action :set_music_show, only: [:show, :edit, :update, :destroy]
-  before_action :only_allow_signed_in_users, except: [:index, :show] 
+  before_action :only_allow_signed_in_users, except: [:index] 
   # GET /music_shows
   # GET /music_shows.json
   def index
