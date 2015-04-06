@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Music show', new_music_show_path %>
+<% if user_signed_in? %><%= link_to 'New Music show', new_music_show_path %><% end %>
