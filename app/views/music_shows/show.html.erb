@@ -20,5 +20,5 @@
   <%= @music_show.ticket_price %>
 </p>
 
-<%= link_to 'Edit', edit_music_show_path(@music_show) %> |
+<% if user_signed_in? %><%= link_to 'Edit', edit_music_show_path(@music_show) %><% end %>
 <%= link_to 'Back', music_shows_path %>
